@@ -1,0 +1,273 @@
+* {
+  --light-grey: #e5e9e5;
+  --light-grey-hover: #e3e9e3;
+  --dark-grey: #717872;
+  --disabled-tittle: #676F6A;
+  --card-disabled: #C8CCC9;
+  --cards-active:#F6F9F5;
+  --white: white;
+  --black: black;
+  --data-is-active: #1F342B;
+  --card-number-active: #2F5244;
+  --border-color: #3E584D;
+  --green-active: #4B695C;
+  --access-background-color: #3D5D4F;
+  --card-background-color: #DDE2DD;
+  --nav-background-color: #F6F9F5;
+  --nav-border-color: #5e9e5;
+  --navigation-background-color: #09130c;
+  --logo-color: #848a87;
+  --hover-color: rgb(255,255,255,0.2);
+  --nav-data-is-active: #97f675;
+  --manage-color: #9a9f9c;
+  --account-border: #131e18;
+  --email-color: #5A615C;
+  --details-border-color: #E1E2E1;
+  --color-text-light-gray: #8C908D;
+  --green-range: #274638;
+  --small-box-background-color: #E9EEE8;
+  --circle-color: #E9EEE9;
+  --square-botton-color: #F6F9F6;
+  --details-hover-color: rgb(243, 241, 241);
+  --margin-tittle: 0.5rem;
+  --margin-is-active: 0.5rem 0;
+  --margin-card-number: 0.9rem 0;
+  --margin-bottom: 0.7rem 0;
+  --margin-disabled-card: 1rem;
+  --margin-bottom-details: 1.5rem;
+  --margin-tittle-details: 0 1.5rem 0 0;
+  --margin-range: 1rem 0;
+  --padding-bottom-access: 2px 8px;
+  --padding-top-nav: 2rem;
+  --padding-is-active: 0.5rem 0 2rem 0;
+  --padding-details: 2.5rem;
+  --padding-card-details: 0 2rem;
+  --padding-value-details: 1rem 0;
+  --padding-button: 0 1rem;
+  --padding-card: 0.5rem;
+  --padding-bottom: 0rem;
+}
+
+@media (min-width: 1025px) {
+  .cards-list {
+    background-color: var(--card-background-color);
+    height: 100%;
+    width: 30%;
+    overflow: auto;
+  }
+  .cards-list__top-nav {
+    background-color: var(--nav-background-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--padding-top-nav);
+    border-bottom: 1px solid var(--nav-border-color);
+    font-size: 2rem;
+    font-weight: bolder;
+  }
+  .cards-list__top-nav .options button {
+    background-color: unset;
+    border: unset;
+    cursor: pointer;
+    transition: ease-in-out 0.2s;
+  }
+  .cards-list__top-nav .options button :hover {
+    background-color: var(--light-grey-hover);
+    border: 0;
+  }
+  .cards-list__active-cards .card {
+    display: grid;
+    grid-template-columns: 2rem 70% 1fr;
+    grid-template-rows: repeat(5, 20%);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    position: relative;
+    background-color: var(--cards-active);
+    border-top: 1px solid var(--light-grey);
+    border-bottom: 1px solid var(--light-grey);
+    transition: ease-in-out 0.2s;
+  }
+  .cards-list__active-cards .card__tittle {
+    grid-area: 2/2/3/3;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: var(--margin-tittle);
+  }
+  .cards-list__active-cards .card__is-active {
+    grid-area: 3/2/4/3;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin: var(--margin-is-active);
+    height: 100%;
+  }
+  .cards-list__active-cards .card__card-number {
+    grid-area: 2/3/6/4;
+    border: 1px solid var(--light-grey);
+    border-radius: 0.5rem 0 0 0;
+    box-shadow: -5px 0 10px -5px var(--light-grey);
+    background-color: var(--white);
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 100%;
+  }
+  .cards-list__active-cards .card__card-number div {
+    width: 100%;
+    height: 20%;
+    margin: var(--margin-card-number);
+    background: var(--light-grey);
+    color: var(--light-grey);
+  }
+  .cards-list__active-cards .card__card-number span {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    font-weight: bold;
+  }
+  .cards-list__active-cards .card__bottom {
+    grid-area: 4/2/5/3;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: var(--margin-bottom);
+  }
+  .cards-list__active-cards .card__bottom .access {
+    color: var(--dark-grey);
+  }
+  .cards-list__active-cards .card__bottom .access span {
+    color: var(--black);
+    background-color: var(--light-grey);
+    padding: var(--padding-bottom-access);
+    border-radius: 3px;
+    font-weight: bold;
+  }
+  .cards-list__active-cards .card:hover {
+    background-color: var(--light-grey-hover);
+  }
+  .cards-list__active-cards .card[data-is-active=true] {
+    background-color: var(--data-is-active);
+    color: var(--white);
+  }
+  .cards-list__active-cards .card[data-is-active=true] .card__card-number {
+    width: 120%;
+    background-color: var(--card-number-active);
+    box-shadow: unset;
+    border: var(--border-color);
+    right: 0;
+    width: 120%;
+  }
+  .cards-list__active-cards .card[data-is-active=true] .card__card-number div {
+    background-color: var(--green-active);
+    color: var(--green-active);
+  }
+  .cards-list__active-cards .card[data-is-active=true] .access span {
+    background-color: var(--access-background-color);
+    color: var(--white);
+  }
+  .cards-list__disabled-cards {
+    margin-top: car(--margin-disabled-card);
+  }
+  .cards-list__disabled-cards .card {
+    display: grid;
+    grid-template-columns: 2rem 70% 1fr;
+    grid-template-rows: repeat(5, 20%);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    position: relative;
+    background-color: var(--cards-active);
+    border-top: 1px solid var(--light-grey);
+    border-bottom: 1px solid var(--light-grey);
+    transition: ease-in-out 0.2s;
+  }
+  .cards-list__disabled-cards .card__tittle {
+    grid-area: 2/2/3/3;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: var(--margin-tittle);
+  }
+  .cards-list__disabled-cards .card__is-active {
+    grid-area: 3/2/4/3;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin: var(--margin-is-active);
+    height: 100%;
+  }
+  .cards-list__disabled-cards .card__card-number {
+    grid-area: 2/3/6/4;
+    border: 1px solid var(--light-grey);
+    border-radius: 0.5rem 0 0 0;
+    box-shadow: -5px 0 10px -5px var(--light-grey);
+    background-color: var(--white);
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 100%;
+  }
+  .cards-list__disabled-cards .card__card-number div {
+    width: 100%;
+    height: 20%;
+    margin: var(--margin-card-number);
+    background: var(--light-grey);
+    color: var(--light-grey);
+  }
+  .cards-list__disabled-cards .card__card-number span {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    font-weight: bold;
+  }
+  .cards-list__disabled-cards .card__bottom {
+    grid-area: 4/2/5/3;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: var(--margin-bottom);
+  }
+  .cards-list__disabled-cards .card__bottom .access {
+    color: var(--dark-grey);
+  }
+  .cards-list__disabled-cards .card__bottom .access span {
+    color: var(--black);
+    background-color: var(--light-grey);
+    padding: var(--padding-bottom-access);
+    border-radius: 3px;
+    font-weight: bold;
+  }
+  .cards-list__disabled-cards .card:hover {
+    background-color: var(--light-grey-hover);
+  }
+  .cards-list__disabled-cards .card[data-is-active=true] {
+    background-color: var(--data-is-active);
+    color: var(--white);
+  }
+  .cards-list__disabled-cards .card[data-is-active=true] .card__card-number {
+    width: 120%;
+    background-color: var(--card-number-active);
+    box-shadow: unset;
+    border: var(--border-color);
+    right: 0;
+    width: 120%;
+  }
+  .cards-list__disabled-cards .card[data-is-active=true] .card__card-number div {
+    background-color: var(--green-active);
+    color: var(--green-active);
+  }
+  .cards-list__disabled-cards .card[data-is-active=true] .access span {
+    background-color: var(--access-background-color);
+    color: var(--white);
+  }
+  .cards-list__disabled-cards .card__tittle {
+    color: var(--disabled-tittle);
+  }
+  .cards-list__disabled-cards .card__is-active {
+    padding: var(--padding-is-active);
+    color: var(--card-disabled);
+  }
+  .cards-list__disabled-cards .card__card-number span {
+    color: var(--card-disabled);
+  }
+}
+
+/*# sourceMappingURL=CardListDesktop.css.map */

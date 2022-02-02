@@ -1,0 +1,51 @@
+@import '../Variables/variables.scss';
+    .cards-list {
+        background-color: var(--card-background-color);
+        height: 100%;
+        width: 30%;
+        overflow: auto;
+
+        &__top-nav {
+            background-color: var(--nav-background-color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: var(--padding-top-nav);
+            border-bottom: 1px solid var(--nav-border-color);
+            font-size: 2rem;
+            font-weight: bolder;
+            .options button {
+                background-color: unset;
+                border: unset;
+                cursor: pointer;
+                transition: ease-in-out 0.2s;
+                :hover {
+                    background-color: var(--light-grey-hover);
+                    border: 0;
+                }
+            }
+        }
+        &__active-cards {
+            .card {
+                @include box;
+            }
+        }
+        &__disabled-cards{
+            margin-top: car(--margin-disabled-card);
+            .card{
+                @include box;
+                &__tittle {
+                    color: var(--disabled-tittle);
+                }
+                &__is-active {
+                    padding: var(--padding-is-active);
+                    color: var(--card-disabled);
+                }
+                &__card-number {
+                    span {
+                        color: var(--card-disabled);
+                    }
+                }
+            }
+        }
+    }

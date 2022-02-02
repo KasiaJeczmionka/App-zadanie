@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="nav" id="nav" data-is-open="false">
+        <div class="nav__top">
+            <div class="nav__top__logo">
+
+                <div class="logo__content">
+                    <img src="./Icons/fintory.svg" alt="Fintory">
+                    <span>Fintory</span>
+                </div>
+    
+            </div>
+    
+            <div class="nav__top__list">
+    
+                <div class="list">
+                    <img src="./Icons/home.svg" alt="Home">
+                    <span>Home</span>
+                </div>
+                <div class="list">
+                    <img src="./Icons/accounts.svg" alt="Accounts">
+                    <span>Accounts</span>
+                </div>
+                <div class="list" data-is-active="true">
+                    <img src="./Icons/cards.svg" alt="Cards">
+                    <span>Cards</span>
+                </div>
+                <div class="list">
+                    <img src="./Icons/payments.svg" alt="Payments">
+                    <span>Payments</span>
+                </div>
+                <div class="list">
+                    <img src="./Icons/team.svg" alt="Team">
+                    <span>Team</span>
+                </div>
+                <div class="list">
+                    <img src="./Icons/settings.svg" alt="Settings">
+                    <span>Settings</span>
+                </div>
+    
+            </div>
+        </div>
+        <div class="nav__end">
+            <div class="nav__end__manage">
+
+                <div class="manage">
+                    <img src="./Icons/help.svg" alt="Help">
+                    <span>Help</span>
+                </div>
+                <div class="manage">
+                    <img src="./Icons/log out.svg" alt="Log out">
+                    <span>Log out</span>
+                </div>
+    
+            </div>
+    
+            <div class="nav__end__account">
+    
+                <div class="img">
+                    <img src="https://picsum.photos/id/237/200/300" alt="Profile">
+                </div>
+                <span class="name">Edward Baldwin</span>
+                <span class="email">ed.baldwin@nasa.com</span>
+    
+            </div>
+    
+        </div>
+
+    </div>
+
+    <div class="cards-list">
+
+        <div class="cards-list__top-nav">
+            <div class="tittle">
+                Cards List
+            </div>
+            <div class="options">
+                <button>
+                    <img src="./Icons/sort.svg" alt="sort">
+                </button>
+                <button>
+                    <img src="./Icons/add.svg" alt="add">
+                </button>
+            </div>
+        </div>
+        <div class="cards-list__active-cards">
+            <div class="card">
+                <div class="card__tittle">Basic Corporate</div>
+                <li class="card__is-active">ACTIVE</li>
+                <div class="card__bottom">
+                    <span class="access">Issued access <span>2</span></span>
+                </div>
+                <div class="card__card-number">
+                    <div>-</div>
+                    <span>4295</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card__tittle">Inventory card</div>
+                <li class="card__is-active">ACTIVE</li>
+                <div class="card__bottom">
+                    <span class="access"> Issued access <span>3</span></span>
+                </div>
+                <div class="card__card-number">
+                    <div>-</div>
+                    <span>0682</span>
+                </div>
+            </div>
+            <div class="card" data-is-active="true">
+                <div class="card__tittle">Software subscriptions</div>
+                <li class="card__is-active">ACTIVE</li>
+                <div class="card__bottom">
+                    <span class="access">Issued access <span>2</span></span>
+                </div>
+                <div class="card__card-number">
+                    <div>-</div>
+                    <span>
+                        5687
+                        <img src="./Icons/mastercard.svg" alt="mastercard">
+                    </span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card__tittle">Traveling card</div>
+                <li class="card__is-active">ACTIVE</li>
+                <div class="card__bottom">
+                    <span class="access">Issued access <span>1</span></span>
+                </div>
+                <div class="card__card-number">
+                    <div>-</div>
+                    <span>8042</span>
+                </div>
+            </div>
+        </div>
+        <div class="cards-list__disabled-cards">
+            <div class="card">
+                <div class="card__tittle">Project "Catana"</div>
+                <li class="card__is-active">DISABLED</li>
+                <div class="card__card-number">
+                    <div>-</div>
+                    <span>6820</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="details">
+        <div class="details__tittle">
+            <button class="button-menu" onclick="openNav()">
+                <img src="./Icons/sort.svg" alt="menu">
+            </button>
+            <div class="name">
+                <img src="./Icons/card-details.svg" alt="logo">
+                <span>Software subscriptions</span>
+            </div>
+            <button class="button">
+                <span>Manage</span>
+                <img src="./Icons/dots.svg" alt="Manage">
+            </button>
+        </div>
+        <div class="details__card-details">
+            <div class="card-number">
+                <span>CARD NUMBER</span>
+                <button class="card-number__value">
+                    5540 2280 8647 5687
+                    <img src="./Icons/copy.svg" alt="copy">
+                </button>
+            </div>
+            <div class="date">
+                <span>EXPIRE DATE</span>
+                <div class="date__value">08/28</div>
+            </div>
+            <div class="cvc">
+                <span>CVC</span>
+                <div class="cvc__value">
+                    ***
+                    <img src="./Icons/eye.svg" alt="cvc">
+                </div>
+            </div>
+            <div class="status">
+                <span>STATUS</span>
+                <div class="status__value">Virtual</div>
+            </div>
+        </div>
+        <div class="details__limits">
+            <div class="daily-limit">
+                <span class="tittle">Spending limits</span>
+                <span class="daily-limit__info">DAILY TRANSACTION LIMIT</span>
+                <div class="daily-limit__range">
+                    <div style="--value: 10%">.</div>
+                </div>
+                <div class="daily-limit__info-value">
+                    <span>$199.00 spent of $2,000.00</span>
+                    <span>10%</span>
+                </div>
+            </div>
+            <button class="button">
+                <div class="button__info">
+                    <span>Estimated amount for this month:</span>
+                </div>
+                <div class="button__value">
+                    <span>$2,920.00</span>
+                </div>
+                <div class="button__img">
+                    <img src="./Icons/arrow-right.svg" alt="arrow">
+                </div>
+            </button>
+        </div>
+        <div class="details__access">
+            <div class="tittle">Issued access <span>2</span></div>
+            <div class="user">
+                <div class="user__profile">
+                    <img src="https://i.picsum.photos/id/1025/4951/3301.jpg?hmac=_aGh5AtoOChip_iaMo8ZvvytfEojcgqbCH7dzaz-H8Y"
+                    alt="Profile">
+                    <span class="name">Ellen Wilson</span>
+                </div>
+                <div class="user__info">
+                    <span class="type">Shutterstock 350</span>
+                </div>
+                <div class="user__cost">
+                    <span class="limit">$1,649.00 / year</span>
+                    <button class="button">
+                        <img src="./Icons/arrow.svg" alt="arrow">
+                    </button>
+                </div>
+            </div>
+            <div class="user">
+                <div class="user__profile">
+                    <img src="https://i.picsum.photos/id/1/5616/3744.jpg?hmac=kKHwwU8s46oNettHKwJ24qOlIAsWN9d2TtsXDoCWWsQ"
+                    alt="Profile">
+                    <span class="name">Margo Madison</span>
+                </div>
+                <div class="user__info">
+                    <span class="type">Webflow Business Pro</span>
+                </div>
+                <div class="user__cost">
+                    <span class="limit">$59.00 / month</span>
+                    <button class="button">
+                        <img src="./Icons/arrow.svg" alt="arrow">
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="details__transactions">
+            <div class="tittle">Recent transactions</div>
+            <div class="item">
+                <div class="item__profile">
+                    <img src="https://play-lh.googleusercontent.com/WUcazXmUT97aoXa1TmB72z1RrP4shaBA4Te9vH5fcCHIPCBVjj5F6fGEPgNq6HXmXw"
+                    alt="Profile">
+                    <span class="name">Dropbox</span>
+                </div>
+                <div class="item__info">
+                    <span class="date">Dec 20,2021</span>
+                    <span class="payments">monthly</span>
+                </div>
+                <div class="item__cost">
+                    <span class="cost">-$299.00</span>
+                    <button class="button">
+                        <img src="./Icons/arrow.svg" alt="arrow">
+                    </button>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item__profile">
+                    <img src="https://media-exp1.licdn.com/dms/image/C560BAQHJ8wc7Y2hT1w/company-logo_200_200/0/1625198733447?e=2159024400&v=beta&t=OgPQe7N_XotDFeJWDzxDMMWpXH8n1UeUzIC6vO31WW0"
+                    alt="Profile">
+                    <span class="name">Zendesk</span>
+                </div>
+                <div class="item__info">
+                    <span class="date">Dec 19,2021</span>
+                    <span class="payments">annual</span>
+                </div>
+                <div class="item__cost">
+                    <span class="cost">-$1,490.00</span>
+                    <button class="button">
+                        <img src="./Icons/arrow.svg" alt="arrow">
+                    </button>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    const openNav = () => {
+        const isOpen = document.getElementById("nav").getAttribute('data-is-open');
+        document.getElementById("nav").setAttribute('data-is-open', isOpen === 'true' ? 'false' : 'true');
+    }
+</script>
+</html>

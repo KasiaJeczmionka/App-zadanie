@@ -1,0 +1,27 @@
+* {font-family: 'Open Sans', sans-serif;}
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+    @import './Navigation/NavigationMobile.scss';
+    @import './Details/DetailsMobile.scss';
+    @import './CardList/CardListMobile.scss';
+};
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    @import './Navigation/NavigationTablet.scss';
+    @import './Details/DetailsTablet.scss';
+    @import './CardList/CardListTablet.scss';
+};
+
+@media (min-width: 1025px) {
+    @import './Navigation/NavigationDesktop.scss';
+    @import './CardList/CardListDesktop.scss';
+    @import './Details/DetailsDesktop.scss';
+};
+
+

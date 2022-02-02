@@ -1,0 +1,15 @@
+@import './NavigationDesktop.scss';
+
+.nav {
+    position: fixed;
+    z-index: 1;
+    top: 6rem;
+    height: calc(100% - 6rem);
+    &[data-is-open="false"] {
+        width: 0%;
+    }
+    &[data-is-open="true"] {
+        width: 100%;
+    }
+}
+

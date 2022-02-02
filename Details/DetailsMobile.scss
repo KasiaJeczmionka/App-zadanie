@@ -1,0 +1,100 @@
+@import './DetailsDesktop.scss';
+.details {
+    background-color: white;
+    width: 100%;
+    position: relative;
+    border: 0;
+    
+    &__tittle {
+        position: fixed;
+        top:0;
+        padding: 0 2rem;
+        width: calc(100% - 4rem);
+        height: 6rem;
+        font-size: 2rem;
+        background-color: white;
+        z-index: 1;
+        img {
+            display: none;
+        }
+        .button-menu {
+            display: flex;
+            border: none;
+            background-color: unset;
+            position: relative;
+            align-items: center;
+            img {
+                width: 2rem;
+                height: 2rem;
+                display: block;
+            }
+        }
+        .button {
+            border: none;
+            span {
+                display: none;
+            }
+            img {
+                display: block;
+                width: 2rem;
+                height: 2rem;
+            }
+        }
+    }
+    &__card-details {
+        margin-top:6rem;
+        display: flex;
+        flex-direction: column;
+        .card-number, .date, .cvc {
+            border: 0;
+        }
+        .status {
+            display: none;
+        }
+    }
+    &__limits {
+        display: flex;
+        flex-direction: column;
+        .daily-limit {
+            width: 100%;
+        }
+        .button {
+            display: flex;
+            padding: 2rem;
+            justify-content: space-between;
+            width: 100%;
+            margin-top: 1rem;
+            &__img {
+                display: none;
+            }
+            &::after {
+                display: none;
+            }
+        }
+    }
+    &__access {
+        .user {
+            &__info {
+                span {
+                    display: none;
+                }
+            }
+        }
+    }
+    &__transactions {
+        .item {
+            &__profile {
+                width: 3rem;
+                span {
+                    display: none;
+                }
+            }
+            &__info {
+                width: calc(50% - 1.5rem);
+            }
+            &__cost {
+                width: calc(50% - 1.5rem);    
+            }
+        }
+    }
+}

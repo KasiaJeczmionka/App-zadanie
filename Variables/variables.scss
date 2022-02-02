@@ -1,0 +1,240 @@
+*{
+    --light-grey: #e5e9e5;
+    --light-grey-hover: #e3e9e3;
+    --dark-grey: #717872;
+    --disabled-tittle: #676F6A;
+    --card-disabled: #C8CCC9;
+    --cards-active:#F6F9F5;
+    --white: white;
+    --black: black;
+    --data-is-active: #1F342B;
+    --card-number-active: #2F5244;
+    --border-color: #3E584D;
+    --green-active: #4B695C;
+    --access-background-color: #3D5D4F;
+    --card-background-color: #DDE2DD;
+    --nav-background-color: #F6F9F5;
+    --nav-border-color: #5e9e5;
+    --navigation-background-color: #09130c;
+    --logo-color: #848a87;
+    --hover-color: rgb(255,255,255,0.2);
+    --nav-data-is-active: #97f675;
+    --manage-color: #9a9f9c;
+    --account-border: #131e18;
+    --email-color: #5A615C;
+    --details-border-color: #E1E2E1;
+    --color-text-light-gray: #8C908D;
+    --green-range: #274638;
+    --small-box-background-color: #E9EEE8;
+    --circle-color: #E9EEE9;
+    --square-botton-color: #F6F9F6;
+    --details-hover-color: rgb(243, 241, 241);
+
+    --margin-tittle: 0.5rem;
+    --margin-is-active: 0.5rem 0;
+    --margin-card-number: 0.9rem 0;
+    --margin-bottom: 0.7rem 0;
+    --margin-disabled-card: 1rem;
+    --margin-bottom-details: 1.5rem;
+    --margin-tittle-details: 0 1.5rem 0 0;
+    --margin-range: 1rem 0;
+
+    --padding-bottom-access: 2px 8px;
+    --padding-top-nav: 2rem;
+    --padding-is-active: 0.5rem 0 2rem 0;
+    --padding-details: 2.5rem;
+    --padding-card-details: 0 2rem;
+    --padding-value-details: 1rem 0;
+    --padding-button: 0 1rem;
+    --padding-card: 0.5rem;
+    --padding-bottom: 0rem;
+
+}
+
+@mixin box {
+    display: grid;
+    grid-template-columns: 2rem 70% 1fr;
+    grid-template-rows: repeat(5, 20%);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    position: relative;
+    background-color: var(--cards-active);
+    border-top: 1px solid var(--light-grey);
+    border-bottom: 1px solid var(--light-grey);
+    transition: ease-in-out .2s;
+
+    &__tittle {
+        grid-area: 2 / 2 / 3 / 3;
+        font-size: 1.20rem;
+        font-weight: bold;
+        margin-bottom: var(--margin-tittle);
+    }
+    &__is-active {
+        grid-area: 3 / 2 / 4 / 3;
+        font-size: 0.8rem;
+        font-weight: bold;
+        margin: var(--margin-is-active);
+        height: 100%;
+    }
+    &__card-number {
+        grid-area: 2 / 3 / 6 / 4;
+        border: 1px solid var(--light-grey);
+        border-radius: 0.5rem 0 0 0;
+        box-shadow: -5px 0 10px -5px var(--light-grey);
+        background-color: var(--white);
+        position: absolute;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        div {
+            width: 100%;
+            height: 20%;
+            margin: var(--margin-card-number);
+            background: var(--light-grey);
+            color: var(--light-grey);
+        }
+        span {
+            width: 100%;
+            text-align: center;
+            display: flex;
+            justify-content: space-around;
+            font-weight: bold;
+        }
+    }
+    &__bottom {
+        grid-area: 4 / 2 / 5 / 3;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin: var(--margin-bottom);
+        .access {
+            color: var(--dark-grey);
+            span {
+                color: var(--black);
+                background-color: var(--light-grey);
+                padding: var(--padding-bottom-access);
+                border-radius: 3px;
+                font-weight: bold;
+            }
+        }
+    }
+    &:hover {
+        background-color: var(--light-grey-hover);
+    }
+    &[data-is-active="true"] {
+        background-color: var(--data-is-active);
+        color: var(--white);
+        .card__card-number {
+            width: 120%;
+            background-color: var(--card-number-active);
+            box-shadow: unset;
+            border: var(--border-color);
+            right: 0;
+            width: 120%;
+            div {
+                background-color: var(--green-active);
+                color: var(--green-active);
+            }
+        }
+        .access {
+            span {
+                background-color: var(--access-background-color);
+                color: var(--white);
+            }
+        }
+    }
+}
+
+@mixin main-box {
+    padding: var(--padding-details);
+    display: flex;
+}
+
+@mixin gray-info-text {
+    font-size: 0.7rem;
+    color: var(--color-text-light-gray);
+}
+
+@mixin card-details-box {
+    display: flex;
+    flex-direction: column;
+    padding: var(--padding-card-details);
+    border-right: 1px solid var(--card-disabled);
+    span {
+        @include gray-info-text;
+    }
+    &__value {
+        background-color: unset;
+        border: unset;
+        padding: var(--padding-value-details);
+        display: flex;
+        align-items: center;
+        font-size: 1.2rem;
+        img {
+            width: 1.5rem;
+            height: 1.5rem;
+            margin-left: var(--margin-disabled-card);
+        }
+    }
+
+}
+
+@mixin conteiner-tittle {
+    .tittle {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: var(--margin-bottom-details);
+    }
+}
+
+@mixin avatar {
+    img {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        margin-right: var(--margin-tittle);
+    }
+}
+
+@mixin small-box-value {
+    color: black;
+    background-color: var(--small-box-background-color);
+    padding: var(--padding-bottom-access);
+    border-radius: 3px;
+    font-weight: bold;
+}  
+
+@mixin profile-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: var(--margin-is-active);
+    &__profile {
+        @include avatar;
+        display: flex;
+        align-items: center;
+        width: 33.3%;
+    }
+    &__info {
+        width: 33.3%;
+        display: flex;
+        align-items: center;
+        color: var(--color-text-light-gray);
+    }
+    &__cost {
+        display: flex;
+        align-items: center;
+        width: 33.3%;
+        justify-content: flex-end;
+        .button {
+            background-color: unset;
+            border: unset;
+            cursor: pointer;
+            img {
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+        }
+    }
+}
+
